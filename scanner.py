@@ -17,6 +17,8 @@ def scan(inputfile):
     stage1linelst = []
     stage2line = ''
     stage2linelst = []
+    wordlst = []
+    newchar = ''
     
     for line in Line:
         stage1line = ''
@@ -36,8 +38,26 @@ def scan(inputfile):
     while '' in stage2linelst:
         stage2linelst.remove('')
 
-    for i in range(len(stage2linelst)):
-        print(i,": ", stage2linelst[i])
+    for line in stage2linelst:
+        wordlst = line.split(" ")
+        for item in wordlst:
+            if item = " ":
+                wordlst.remove(" ")
+            else:
+                newchar = ''
+                for character in item:
+                    
+                    if character != ",":
+                        newchar+= character
+                stage3wordlst.append(character)
+                
+        for word in stage3wordlst:
+            stage3linelst.append(word)
+        stage3wordlst.clear()
+
+    
+
+    
 
     
         
