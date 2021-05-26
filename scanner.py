@@ -3,6 +3,7 @@
 This code scans a file and outputs a condensed, numbered list containing of the assembly code
 
 """
+from Assemblystructure import Assemstruct
 
 def scan(inputfile):
     "This file scans an assembly code and returns a list whose items are the numbered lines of the code"
@@ -37,6 +38,9 @@ def scan(inputfile):
 
     for i in range(len(stage2linelst)):
         print(i,": ", stage2linelst[i])
+
+    
+        
     
     
 
