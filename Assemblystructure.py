@@ -1,14 +1,24 @@
+
 class Assemstruct(object):
     def __init__(self):
         self.count = 0
         self.lst = []
-        self.dct = {}
-    def segmentadd(linelst):
-        for word in linelst:
-            self.lst.append(word.split())
-            self.lst.append(word)
-        self.dct.append(self.lst)
+    def addcode(lst):
+        self.lst = lst          
+    def addline(line):
+        self.lst.append(line)
+    def getline(linenum):
+        return self.linelst[linenum]
+    def getlineword(line,wordnum):
+        templine = self.lst[line]
+        return templine[wordnum]
+    def yieldword(word):
+        for item in self.lst:
+            for words in item:
+                if words == word:
+                    yield words
 
-        self.lst.clear()
-
-   
+if __name__ == '__main__':
+    test = Assemstruct()
+    test.__init__()
+    test.addline(["ADD","R3","R2","R1"])
