@@ -22,7 +22,7 @@ def main(file=""):
                                 print("Non-string file name entered, please enter a string file name")
 
                 if file != "":
-                        scan(file)
+                        print(scan(file))
                         break
                         
                 

@@ -19,6 +19,7 @@ def scan(inputfile):
     stage2linelst = []
     stage3linelst = []
     stage3wordlst =[]
+    labellst = []
     wordlst = []
     newchar = ''
 
@@ -59,6 +60,9 @@ def scan(inputfile):
             print("/n this is splitline modified ",splitline)
         stage3linelst.append(splitline)
 
-    print(stage3linelst)
+    for item in stage3linelst:
+        labellst.append(item[0])
+
+    return [stage3linelst,labellst]
 
 
