@@ -10,8 +10,8 @@ def scan(inputfile):
     
     
     numberedcodels = []  
-    codefile = open(inputfile,"r")              #read the file containing the assembly code
-    Line = codefile.readlines()                 # Read all lines to Line
+    with open(inputfile,"r") as codefile:
+        Line = codefile.readlines()                 # Read all lines to Line
     count = 0
     stage1line = ''
     stage1linelst = []                          # Initialize all working lists and strings 
